@@ -47,16 +47,33 @@ git push origin feature/mi_modelo_ventas
 
 ## 📩 2. Pull Requests (La Ceremonia de Revisión)
 
-Un Pull Request (PR) o Merge Request (MR) es una solicitud formal en GitHub/Gitlab/Bitbucket que dice: *"Equipo, he terminado esto, ¿podemos juntarlo a develop?"*
+¡Peligro! 🚨 **NUNCA debes hacer un `git push origin develop` directamente a las ramas principales.** En ambientes profesionales estas ramas están protegidas. El único camino para que tu código entre allí es hacer un "Pull Request" (PR) o "Merge Request" (MR).
 
-**Pasos de un PR Excelente:**
+Un PR es una solicitud formal en GitHub/GitLab que dice: *"Equipo, he terminado esto, ¿podemos juntarlo a develop?"*
+
+**Pasos de un PR Excelente (En la Nube de GitHub/GitLab):**
 1. **Título Descriptivo:** Claro, que se entienda la meta final (ej. `[Feature] Dashboard de Ventas Q4`).
 2. **Descripción:** 
    - ¿Qué problema resuelve este código?
    - ¿A qué ticket (Jira, Trello) corresponde?
    - Linkea capturas de pantalla si modificaste algo visual o una gráfica.
 3. **Revisión en Parejas (Code Review):** Nunca apruebes tu propio PR. Pídele la revisión cruzada a un colega y sé abierto al feedback. Es el paso crucial para mejorar tu código y no romper `develop`.
-4. **Merge:** Cuando tengas aprobación, júntalo (Merge) y elimina inmediatamente la rama `feature/mi_modelo_ventas` para no generar basura acumulada en el repositorio.
+4. **Merge (La Fusión):** Una vez aprobado, presionas el botón verde de "Merge pull request" en la página web. **¡En este exacto instante es cuando tu código entra por fin a `develop` en la nube!**
+
+### 2.1 Mantenimiento en tu PC (Después del Merge)
+
+Como tu código ya se fusionó en la web, tu ordenador se quedó desactualizado. Siempre que termines un PR en la web, vuelve a tu terminal y aplica esta limpieza:
+
+```bash
+# 1. Te cambias a la rama develop de tu ordenador
+git checkout develop
+
+# 2. Te bajas la nueva versión (que ahora ya incluye tus cambios fusionados)
+git pull origin develop
+
+# 3. Borras tu rama de trabajo vieja porque ya no sirve (tu misión se cumplió)
+git branch -d feature/mi_modelo_ventas
+```
 
 ---
 

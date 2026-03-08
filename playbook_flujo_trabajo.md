@@ -26,7 +26,7 @@ El estándar de la industria (*GitHub Flow* o *Git Flow*) dicta que el ciclo de 
 git checkout -b feature/mi_modelo_ventas
 ```
 
-### 1.2 El camino seguro para subir tu trabajo
+### 1.3 El camino seguro para subir tu trabajo
 Antes de pedir a tus colegas que empalmen tu código, debes asegurarte de que tu rama está al día con la versión del resto del equipo. Es decir:
 
 ```bash

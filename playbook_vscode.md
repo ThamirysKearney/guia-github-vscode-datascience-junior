@@ -83,7 +83,47 @@ Estos son los comandos de navegación que usarás todos los días. ¡Apréndelos
 | `mkdir -p` | Crear estructura de carpetas anidadas | `mkdir -p src/data/raw` |
 | `rm -rf` | Eliminar carpeta y su contenido (¡Peligro!) | `rm -rf carpeta_temporal` |
 | `cat` | Ver contenido de un archivo sin abrir el editor | `cat README.md` |
-| `clear` | Limpiar la pantalla de la terminal | `clear` |
+| `clear` | Limpia la pantalla de la terminal | `clear` |
+
+---
+
+## 💻 5. Operaciones de Git desde la Terminal (Git Bash)
+
+Dado que usarás la terminal de VS Code de forma constante, aquí tienes las recetas para las acciones más comunes administrando de tu control de versiones:
+
+### 5.1 Eliminar un archivo sobrante en una rama (y en remoto)
+Si por error un archivo aparece en una rama donde no debe estar (ej: `README.md` que solo debería estar en `main`), así es como se borra para siempre usando los comandos de Bash:
+
+```bash
+# 1. Asegúrate de estar en la rama donde quieres eliminar el archivo
+git checkout nombre_de_tu_rama
+
+# 2. Elimina el archivo (Esto lo borra de tu PC y avisa a Git a la vez)
+git rm nombre_del_archivo.extensión
+
+# 3. Crea el commit como acción de limpieza
+git commit -m "chore: remove unwanted file from branch"
+
+# 4. Súbelo a la nube (GitHub/GitLab/Bitbucket)
+git push origin nombre_de_tu_rama
+```
+*(Nota: Estos comandos son exactamente los mismos independientemente de si el código se guarda en GitHub, GitLab o Bitbucket).*
+
+### 5.2 Cambiar el nombre a una rama de Git
+Si te equivocaste al teclear el nombre de tu rama al crearla (ej: ibas a poner `feature/ventas` y pusiste `feattur/ventass`), haz esto en tu terminal:
+
+```bash
+# Opción A: Si ya estás posicionado dentro de la rama mal escrita
+git branch -m feature/nuevo_nombre_correcto
+
+# Opción B: Si estás en otra rama y quieres cambiarle el nombre desde fuera
+git branch -m feattur/ventass feature/nuevo_nombre_correcto
+```
+**Importante:** Si la rama con el nombre "feo" ya la habías subido a la nube (`git push`), tendrás que empujar la rama nueva y borrar la antigua en remoto:
+```bash
+git push origin -u feature/nuevo_nombre_correcto
+git push origin --delete feattur/ventass
+```
 
 ---
 

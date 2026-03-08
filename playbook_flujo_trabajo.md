@@ -11,13 +11,22 @@ La Regla de Oro en equipos profesionales: **¡NUNCA TRABAJES EN `main`!**
 - `develop` o `staging` es la rama donde se unen todos los features de los miembros del equipo.
 - Tú trabajarás siempre en ramas separadas que salen de `develop` (o de `main` en proyectos pequeños).
 
-### 1.1 Empezando a trabajar
+### 1.1 La Regla de Oro: Las ramas están ligadas a "Tareas", no a "Días"
+
+El estándar de la industria (*GitHub Flow* o *Git Flow*) dicta que el ciclo de vida de tu rama debe coincidir con el tiempo que tardes en terminar una tarea (ej: crear un gráfico, limpiar datos). 
+
+**¿Cómo funciona el ciclo de vida de una rama?**
+1. **Nace para una misión:** Creas la rama desde `develop` para tu tarea específica.
+2. **El trabajo continuo:** Al final de tu jornada, haces commit y push de tus cambios. Al día siguiente, haces pull de `develop` para actualizarte, y sigues trabajando **en la misma rama**.
+3. **La rama muere y desaparece:** Una vez que terminas la tarea y es aprobada por tus compañeros en un *Pull Request*, aplicas el "Merge" hacia `develop`. ¡En ese momento tu misión termina y debes **eliminar tu rama** para no acumular basura!
+
+### 1.2 Empezando a trabajar
 ```bash
 # Crear tu propia rama y moverte a ella (Usa features/, fix/, chore/ etc)
 git checkout -b feature/mi_modelo_ventas
 ```
 
-### 1.2 El camino seguro para subir tu trabajo
+### 1.3 El camino seguro para subir tu trabajo
 Antes de pedir a tus colegas que empalmen tu código, debes asegurarte de que tu rama está al día con la versión del resto del equipo. Es decir:
 
 ```bash
@@ -38,16 +47,33 @@ git push origin feature/mi_modelo_ventas
 
 ## 📩 2. Pull Requests (La Ceremonia de Revisión)
 
-Un Pull Request (PR) o Merge Request (MR) es una solicitud formal en GitHub/Gitlab/Bitbucket que dice: *"Equipo, he terminado esto, ¿podemos juntarlo a develop?"*
+¡Peligro! 🚨 **NUNCA debes hacer un `git push origin develop` directamente a las ramas principales.** En ambientes profesionales estas ramas están protegidas. El único camino para que tu código entre allí es hacer un "Pull Request" (PR) o "Merge Request" (MR).
 
-**Pasos de un PR Excelente:**
+Un PR es una solicitud formal en GitHub/GitLab que dice: *"Equipo, he terminado esto, ¿podemos juntarlo a develop?"*
+
+**Pasos de un PR Excelente (En la Nube de GitHub/GitLab):**
 1. **Título Descriptivo:** Claro, que se entienda la meta final (ej. `[Feature] Dashboard de Ventas Q4`).
 2. **Descripción:** 
    - ¿Qué problema resuelve este código?
    - ¿A qué ticket (Jira, Trello) corresponde?
    - Linkea capturas de pantalla si modificaste algo visual o una gráfica.
 3. **Revisión en Parejas (Code Review):** Nunca apruebes tu propio PR. Pídele la revisión cruzada a un colega y sé abierto al feedback. Es el paso crucial para mejorar tu código y no romper `develop`.
-4. **Merge:** Cuando tengas aprobación, júntalo (Merge) y elimina inmediatamente la rama `feature/mi_modelo_ventas` para no generar basura acumulada en el repositorio.
+4. **Merge (La Fusión):** Una vez aprobado, presionas el botón verde de "Merge pull request" en la página web. **¡En este exacto instante es cuando tu código entra por fin a `develop` en la nube!**
+
+### 2.1 Mantenimiento en tu PC (Después del Merge)
+
+Como tu código ya se fusionó en la web, tu ordenador se quedó desactualizado. Siempre que termines un PR en la web, vuelve a tu terminal y aplica esta limpieza:
+
+```bash
+# 1. Te cambias a la rama develop de tu ordenador
+git checkout develop
+
+# 2. Te bajas la nueva versión (que ahora ya incluye tus cambios fusionados)
+git pull origin develop
+
+# 3. Borras tu rama de trabajo vieja porque ya no sirve (tu misión se cumplió)
+git branch -d feature/mi_modelo_ventas
+```
 
 ---
 

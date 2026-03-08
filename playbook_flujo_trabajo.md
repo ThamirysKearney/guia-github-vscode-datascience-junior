@@ -11,7 +11,16 @@ La Regla de Oro en equipos profesionales: **¡NUNCA TRABAJES EN `main`!**
 - `develop` o `staging` es la rama donde se unen todos los features de los miembros del equipo.
 - Tú trabajarás siempre en ramas separadas que salen de `develop` (o de `main` en proyectos pequeños).
 
-### 1.1 Empezando a trabajar
+### 1.1 La Regla de Oro: Las ramas están ligadas a "Tareas", no a "Días"
+
+El estándar de la industria (*GitHub Flow* o *Git Flow*) dicta que el ciclo de vida de tu rama debe coincidir con el tiempo que tardes en terminar una tarea (ej: crear un gráfico, limpiar datos). 
+
+**¿Cómo funciona el ciclo de vida de una rama?**
+1. **Nace para una misión:** Creas la rama desde `develop` para tu tarea específica.
+2. **El trabajo continuo:** Al final de tu jornada, haces commit y push de tus cambios. Al día siguiente, haces pull de `develop` para actualizarte, y sigues trabajando **en la misma rama**.
+3. **La rama muere y desaparece:** Una vez que terminas la tarea y es aprobada por tus compañeros en un *Pull Request*, aplicas el "Merge" hacia `develop`. ¡En ese momento tu misión termina y debes **eliminar tu rama** para no acumular basura!
+
+### 1.2 Empezando a trabajar
 ```bash
 # Crear tu propia rama y moverte a ella (Usa features/, fix/, chore/ etc)
 git checkout -b feature/mi_modelo_ventas

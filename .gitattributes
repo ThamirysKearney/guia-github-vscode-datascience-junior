@@ -1,0 +1,7 @@
+# Normalize line endings to LF in the repository for all text files 
+# Forzar LF en el repositorio (todos los OS)
+* text=auto
+
+# Ensure Jupyter notebooks stay LF (better diffs, cross-platform consistency)
+# Asegurarse que los notebooks no se conviertan a CRLF
+*.ipynb text eol=lf

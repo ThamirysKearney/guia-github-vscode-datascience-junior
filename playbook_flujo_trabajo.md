@@ -88,7 +88,6 @@ git switch develop
 git push origin --delete feature/vieja-funcionalidad
 
    ```
-
 ---
 
 ## 🏆 3. Checklist de Fin de Jornada
@@ -121,3 +120,4 @@ Nunca dejes tu ordenador un viernes (ni ningún día) sin asegurarte de que tu a
 ## 💡 Secretos de Experiencia (Tips Pro)
 - **El estado de la rama:** Cada mañana, antes de escribir una sola línea, hago `git pull origin develop`. Me ahorra tener que resolver conflictos gigantes al final de la semana.
 - **La comunicación es clave:** Si voy a tocar un archivo que sé que otro colega también está usando, le aviso por Slack o Teams. Evitar el conflicto humano es más importante que evitar el conflicto de Git.
+

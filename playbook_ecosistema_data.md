@@ -1,6 +1,6 @@
 # 📊 Playbook: Herramientas del Ecosistema Data
 
-El sector de los datos incluye docenas de herramientas y evoluciona rápido. En lugar de conocerlas todas a medias, la clave del éxito profesional es saber **qué es**, **para qué sirve**, **sus ventajas/desventajas** y **cuándo utilizarlas según tu perfil** (Data Analyst, Scientist o Engineer).
+El sector de los datos incluye docenas de herramientas y evoluciona rápido. En lugar de conocerlas todas a medias, la clave del éxito profesional para mí es saber **qué es**, **para qué sirve**, **ventajas/desventajas** y **cuándo utilizarlas según el perfil** (Data Analyst, Scientist o Engineer).
 
 > **Insight importante del mercado:**
 > El stack más común hoy y el "must-have" para roles analíticos es:
@@ -139,16 +139,20 @@ El sector de los datos incluye docenas de herramientas y evoluciona rápido. En 
 
 ---
 
-## 🧭 ¿Qué dominan tus Colegas? (Stack y Rutas)
+## 🧭 ¿Qué dominan los Colegas? (Stack y Rutas)
 
-Para que entiendas el flujo donde entras al integrarte con colegas de TI:
+Para que entienda el flujo donde entro al integrarme con colegas de TI:
 
-- 📊 **Si eres Data Analyst:** Pide un problema -> Te bajas los datos con `SQL` y `Pandas` -> Modelizas e Indagas -> Pintas un Cuadro de mando de métricas en `Power BI / Tableau`. 
-- 🔬 **Si eres Data Scientist:** Pides problema a DA -> Preparas la ingesta a `Python` masivo-> Preparas y curas variables para el Modelado (Scikit, XGBoost) -> Comruebas su % real.
-- ⚙️ **Si eres Data Engineer:** Miras donde hace agua la infraestructura -> Levantas clústeres de cálculo (`Spark, Airflow`) y limpias ingestas en `dbt/BigQuery` diariamente de noche -> Te abrazas al DevOps y a los contenedores.
-- 🤖 **Si eres ML Engineer:** Tomas el modelo científico del DS, lo "limpias" para que vuele milisegundos en backend en tu lenguaje (C o PyTorch a fondo) -> Monitorizas drift en `MLFlow` montado en un endpoint vivo de la web.
+- 📊 **Si soy Data Analyst:** Pido un problema -> Bajo los datos con `SQL` y `Pandas` -> Modelizo e Indago -> Pinto un Cuadro de mando de métricas en `Power BI / Tableau`.
+- 📈 **Si soy BI Analyst:** Desarrollo reportes y dashboards para ayudar a la empresa a visualizar datos y tomar decisiones estratégicas. Uso `SQL`, `Power BI`, `Tableau` y `Looker`. Mis habilidades clave son el análisis de negocio y el reporte de insights.
+- 🔬 **Si soy Data Scientist:** Pido problema a DA -> Preparo la ingesta a `Python` masivo-> Preparo y curo variables para el Modelado (Scikit, XGBoost) -> Compruebo el % real.
+- 🤖 **Si soy ML Engineer:** Diseño, desarrollo y optimizo modelos de Machine Learning para que funcionen a escala y con eficiencia. Domino `Python`, `Tensorflow/Pytorch`, `Spark MLlib` y contenedores como `Docker/Kubernetes`.
+- 🔄 **Si soy MLOps Engineer:** Automatizo y optimizo el despliegue, monitoreo y escalabilidad de los modelos en producción. Mi mundo es el `DevOps`, la automatización y herramientas como `MLflow` y `Jenkins`.
+- ⚙️ **Si soy Data Engineer:** Miro donde hace agua la infraestructura -> Levanto clústeres de cálculo (`Spark, Airflow`) y limpio ingestas en `dbt/BigQuery` diariamente de noche -> Me abrazo al DevOps y a los contenedores.
+- 🏗️ **Si soy Data Architect:** Diseño la arquitectura de datos para asegurar una infraestructura escalable, segura y eficiente. Domino el diseño de sistemas, modelado de datos y nubes como `AWS/Azure/GCP`.
+- 🛡️ **Si soy Data Steward:** Aseguro la calidad, gobernanza e integridad de los datos en todo su ciclo de vida. Me encargo de la normativa, privacidad y gestión de maestros (MDM) usando herramientas como `Talend` o `Informatica`.
 
 > 💡 **Buenas Prácticas para Herramientas**
-> 1. No te obsesiones con "aprender 5 herramientas cloud diferentes". Entiende los conceptos de CI/CD, escalabilidad y DW. Si conoces AWS (S3), migrar a GCP (GCS) es intuitivo.
-> 2. Documenta tus dependencias en `requirements.txt`.
-> 3. En la fase junior/mid, prioriza volverte fuerte en SQL puro y Pandas antes de querer volar en Deep Learning.
+> 1. No me obsesiono con "aprender 5 herramientas cloud diferentes". Entiendo los conceptos de CI/CD, escalabilidad y DW. Si conozco AWS (S3), migrar a GCP (GCS) es intuitivo.
+> 2. Documento las dependencias en `requirements.txt`.
+> 3. En la fase junior/mid, priorizo volverme fuerte en SQL puro y Pandas antes de querer volar en Deep Learning.

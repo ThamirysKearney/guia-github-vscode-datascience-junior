@@ -70,14 +70,23 @@ Un PR es una solicitud formal en GitHub/GitLab que dice: *"Equipo, he terminado 
 Como tu código ya se fusionó en la web, tu ordenador se quedó desactualizado. Siempre que termines un PR en la web, vuelve a tu terminal y aplica esta limpieza:
 
    ```bash
-# 1. Te cambias a la rama develop de tu ordenador
+# 1. Me cambio a la rama develop de mi ordenador
    git checkout develop
 
-# 2. Te bajas la nueva versión (que ahora ya incluye tus cambios fusionados)
+# 2. Me bajo la nueva versión (que ahora ya incluye mis cambios fusionados)
    git pull origin develop
 
-# 3. Borras tu rama de trabajo vieja porque ya no sirve (tu misión se cumplió)
-git branch -d feature/mi-rama-vieja
+# DOUBLE CHECK - compruebo que mis cambios nuevos de esa rama estan en la develop. 
+
+# 3. Repo local - Borro mi rama de trabajo vieja porque ya no sirve (misión cumplida)
+git branch -d feature/vieja-funcionalidad
+
+# 4. Vuelvo a la develop
+git switch develop 
+
+# 5. Repo en la nube - Elimino la misma rama de GitHub
+git push origin --delete feature/vieja-funcionalidad
+
    ```
 
 ---

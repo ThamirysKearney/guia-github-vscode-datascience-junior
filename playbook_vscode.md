@@ -3,12 +3,52 @@
 Bienvenido al Playbook exclusivo sobre el uso de **Visual Studio Code (VS Code)** y la línea de comandos (Bash/Terminal). Este documento te servirá como guía rápida para moverte como un profesional, sin depender del ratón y siguiendo las mejores prácticas corporativas.
 
 ---
+## 0. Continuar trabajando 
+**I. ver donde estoy** pwd
+**II. voy al proyecto** cd nombre-del-proyecto
+**III. miro el contenido de la carpeta** ls 
+
+## 1. actualizo la rama base (develop o main)
+**IV. voy a la rama base** git switch/checkout develop
+**V. traigo los ultimos cambios del remoto** git pull origin develop/main
+
+## 2. Creo la nueva rama de trabajo
+**VI. Creo una nueva rama para la tarea** git switch -c feature/nueva-tarea
+
+## 3. Realizo cambios 
+**VII. Editar o crear archivos** guardo cambios (ctrl + s)
+**VIII. Ver cambios realizados** git status 
+
+## 4. Preparo commit 
+**IX. Añadir archivos al staging area** git add .
+o git add archivo.py
+**X. Crear commit** git commit -m "feat: what I´ve done in imperative voice"
+
+## 5. Subir cambios al remoto
+**Subir la rama al repositorio remoto** git push origin feature/nueva-tarea
+
+## Flujo final simplificado
+
+cd proyecto
+git switch develop
+git pull origin develop
+git switch -c feature/nueva-tarea
+
+# editar archivos
+
+git status
+git add .
+git commit -m "feat: descripción del cambio"
+git push origin feature/nueva-tarea
+
+
 
 ## 💻 1. Preparación del Terreno
 
 ### 1.1 Abrir VS Code y la Terminal
 - Al abrir VS Code, asegúrate siempre de tener la terminal visible.
-- **Atajo:** Presiona ``Ctrl + ` `` o ve al menú superior: **Terminal -> New Terminal**.
+- **Atajo:** Presiona ``Ctrl + ` `` o `Ctrl + j`ve al menú superior: **Terminal -> New Terminal**.
+- **Atajo para abrir chat IA VS code:** ``Ctrl + alt + i`` 
 - **Tipo de Terminal:** Verifica que en el menú desplegable (a la derecha de la ventana de terminal) esté seleccionado **Bash** (Git Bash) o **PowerShell** si trabajas en Windows.
 
 > ⚠️ **Buenas Prácticas:** 

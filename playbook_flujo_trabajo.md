@@ -4,6 +4,7 @@ Saber escribir código es solo el 30% del trabajo. El otro 70% es cómo colaboro
 
 ---
 
+
 ## 🌿 1. Política de Ramas (Branching Flow)
 
 ### ⚡ Ciclo de vida de mi rama
